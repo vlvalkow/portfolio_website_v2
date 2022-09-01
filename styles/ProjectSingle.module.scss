@@ -1,0 +1,10 @@
+@import "variables";
+
+section {
+    &.hero {
+        h1 {
+            text-align: left;
+            font-size: $font-size-base * 3;
+        }
+    }
+}

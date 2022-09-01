@@ -1,0 +1,29 @@
+@import "variables";
+
+.link {
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover {
+        color: #ffffff;
+        text-decoration: none;
+
+        .title {
+            color: $warning;
+        }
+    }
+}
+
+.card {
+    background-color: $primary;
+    padding: 0;    
+}
+
+.image {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.body {
+    padding: 1rem;
+}

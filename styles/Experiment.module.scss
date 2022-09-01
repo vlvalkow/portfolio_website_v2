@@ -1,0 +1,26 @@
+@import "variables";
+
+.link {
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover {
+        color: #ffffff;
+        text-decoration: none;
+
+        .title {
+            color: $warning;
+        }
+    }
+}
+
+.technology-list {
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.technology {
+    padding: 0.1rem 0.5rem;
+    font-weight: bold;
+    color: #27242c;
+}
