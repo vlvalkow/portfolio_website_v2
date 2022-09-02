@@ -1,13 +1,12 @@
 import ErrorPage from 'next/error'
 import { useRouter } from 'next/router'
-import Header from "../../components/Header"
-import Footer from "../../components/Footer"
 import ProjectTitleBlock from '../../components/Block/Project/ProjectTitleBlock'
 import ProjectBackBlock from '../../components/Block/Project/ProjectBackBlock'
 import ProjectContentBlock from '../../components/Block/Project/ProjectContentBlock'
 import SettingRepository from '../../lib/Repository/SettingRepository'
 import PageRepository from '../../lib/Repository/PageRepository'
 import ProjectRepository from '../../lib/Repository/ProjectRepository'
+import Layout from '../../components/layout'
 
 export default function ProjectSingle({ page, project, settings }) {
     const router = useRouter()
@@ -16,11 +15,10 @@ export default function ProjectSingle({ page, project, settings }) {
     }
 
     return (
-        <>
-            <Header
-                email={settings.email}
-                username={settings.username}
-            />
+        <Layout
+            email={settings.email}
+            username={settings.username}
+        >
             <ProjectTitleBlock
                 title={project.title}
             />
@@ -28,8 +26,7 @@ export default function ProjectSingle({ page, project, settings }) {
                 content={project.content}
             />
             <ProjectBackBlock />
-            <Footer />
-        </>
+        </Layout>
     )
 }
 

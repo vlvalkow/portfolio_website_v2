@@ -2,23 +2,21 @@ import SettingRepository from "../lib/Repository/SettingRepository";
 import ProjectRepository from "../lib/Repository/ProjectRepository";
 import StageRepository from "../lib/Repository/StageRepository";
 import ExperimentRepository from "../lib/Repository/ExperimentRepository";
-import Header from "../components/Header";
 import HeroBlock from "../components/Block/HeroBlock";
-import Footer from "../components/Footer";
 import PageRepository from "../lib/Repository/PageRepository";
 import HomeAboutBlock from "../components/Block/Home/HomeAboutBlock";
 import HomeWorkBlock from "../components/Block/Home/HomeWorkBlock";
 import HomeProjectsBlock from "../components/Block/Home/HomeProjectsBlock";
 import HomeExperimentsBlock from "../components/Block/Home/HomeExperimentsBlock";
 import HomeContactBlock from "../components/Block/Home/HomeContactBlock";
+import Layout from "../components/layout";
 
 export default function Home({ page, settings, stages, projects, experiments }) {
     return (
-        <>
-            <Header
+        <Layout
                 email={settings.email}
                 username={settings.username}
-            />
+        >
             <HeroBlock
                 block={page.content.find(b => b.type === 'hero')}
             />
@@ -41,8 +39,7 @@ export default function Home({ page, settings, stages, projects, experiments }) 
                 block={page.content.find(b => b.type === 'home_contact')}
                 email={settings.email}
             />
-            <Footer />
-        </>
+        </Layout>
     )
 }
 
