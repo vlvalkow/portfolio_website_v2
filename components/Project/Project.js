@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../../styles/Project.module.scss'
 
 export default function Project({ slug, title, imageSrc, description }) {
@@ -11,7 +12,7 @@ export default function Project({ slug, title, imageSrc, description }) {
                 <a className={styles.link}>
                     <div className={`${styles.card} card card-link`}>
                         <div className="card-header">
-                            <img className={`${styles.image} img-fluid`} src={imageSrc} alt="" />
+                            <Image className={`${styles.image} img-fluid`} src={imageSrc} alt="" />
                         </div>
                         <div className={`${styles.body} card-body`}>
                             <h3 className={styles.title}>{title}</h3>

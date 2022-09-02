@@ -1,4 +1,5 @@
 import SectionBlock from './SectionBlock';
+import Image from 'next/image'
 
 export default function Block({ block }) {
     switch (block.type) {
@@ -7,8 +8,9 @@ export default function Block({ block }) {
                 <SectionBlock
                     classes={block.classes}
                     variant={block.variant}
-                    children={block.data.map((b, bi) => <Block key={bi} block={b} />)}
-                />
+                >
+                    {block.data.map((b, bi) => <Block key={bi} block={b} />)}
+                </SectionBlock>
             )
         case 'row':
             return (
@@ -38,7 +40,7 @@ export default function Block({ block }) {
             )
         case 'image':
             return (
-                <img
+                <Image
                     className={block.classes ?? 'img-fluid'}
                     src={block.data.sourceUrl}
                     alt={block.data.alternativeText}

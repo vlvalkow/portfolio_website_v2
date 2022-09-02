@@ -12,7 +12,7 @@ export default function HomeContactBlock({ block, email }) {
                         href={`mailto:${email}`}>
                         <a
                             className="btn btn-warning"
-                        >Let's talk</a>
+                        >Let&apos;s talk</a>
                     </Link>
                 </div>
             </div>
