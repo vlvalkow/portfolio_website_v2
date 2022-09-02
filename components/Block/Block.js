@@ -44,6 +44,9 @@ export default function Block({ block }) {
                     className={block.classes ?? 'img-fluid'}
                     src={block.data.sourceUrl}
                     alt={block.data.alternativeText}
+                    width={block.data.width}
+                    height={block.data.height}
+                    layout={block.data.layout ?? 'intrinsic'}
                 />
             )
         case 'testimonial':

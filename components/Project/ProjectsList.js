@@ -8,7 +8,7 @@ export default function ProjectsList({projects}) {
                     key={project.id}
                     slug={project.slug}
                     title={project.title}
-                    imageSrc={project.imageSrc}
+                    image={project.image}
                     description={project.description}
                 />
             ))}
