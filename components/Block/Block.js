@@ -1,5 +1,6 @@
 import SectionBlock from './SectionBlock';
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Block({ block }) {
     switch (block.type) {
@@ -25,7 +26,18 @@ export default function Block({ block }) {
                 </div>
             )
         case 'paragraph':
-            return <p className={block.classes}>{block.data}</p>
+            return (
+                <p className={block.classes}>
+                    {
+                        Array.isArray(block.data) ?
+                            block.data
+                                .map((b, bi) => <Block key={bi} block={b} />)
+                                .reduce((a, b) => [a, ' ', b]) :
+                            block.data
+                    }</p>
+            )
+        case 'linebreak':
+            return <br/>
         case 'h1':
             return <h1 className={block.classes}>{block.data}</h1>
         case 'h2':
@@ -37,6 +49,14 @@ export default function Block({ block }) {
                 <ul>
                     {block.data.map((li, i) => <li key={i}>{li}</li>)}
                 </ul>
+            )
+        case 'text':
+            return block.data
+        case 'link':
+            return (
+                <Link href={block.href}>
+                    <a>{block.label}</a>
+                </Link>
             )
         case 'image':
             return (
