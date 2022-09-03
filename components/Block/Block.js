@@ -55,7 +55,7 @@ export default function Block({ block }) {
         case 'link':
             return (
                 <Link href={block.href}>
-                    <a>{block.label}</a>
+                    <a className={block.classes}>{block.label}</a>
                 </Link>
             )
         case 'image':
