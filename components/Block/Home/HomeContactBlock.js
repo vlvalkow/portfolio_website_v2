@@ -11,8 +11,8 @@ export default function HomeContactBlock({ block, email }) {
                     <Link
                         href={`mailto:${email}`}>
                         <a
-                            className="btn btn-warning"
-                        >Let&apos;s talk</a>
+                            className="btn btn-lg fw-bolder btn-warning"
+                        >Get in touch!</a>
                     </Link>
                 </div>
             </div>
