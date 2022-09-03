@@ -1,4 +1,5 @@
 @import "variables";
+@import '../node_modules/bootstrap/scss/mixins/breakpoints';
 
 .link {
     color: #ffffff;
@@ -15,8 +16,7 @@
 }
 
 .card {
-    background-color: $primary;
-    padding: 0;    
+    padding: 0;
 }
 
 .image {
@@ -25,5 +25,5 @@
 }
 
 .body {
-    padding: 1rem;
+    padding: 1.3rem;
 }

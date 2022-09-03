@@ -10,8 +10,8 @@ export default function HomeProjectsBlock({ block, projects }) {
                     {block.data.map((b, bi) => <Block key={bi} block={b} />)}
                 </div>
             </div>
-            <div className="row row-cols-auto gy-5 row-cols-md-3">
-                <ProjectsList projects={projects} />
+            <div className="row row-cols-auto gy-5 row-cols-md-2 row-cols-lg-3 justify-content-center">
+                <ProjectsList projects={projects} backgroundClass="bg-primary" />
             </div>
         </SectionBlock>
     )

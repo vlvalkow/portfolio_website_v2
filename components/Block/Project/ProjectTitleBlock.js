@@ -3,8 +3,7 @@ import styles from '../../../styles/ProjectTitleBlock.module.scss'
 
 export default function ProjectTitleBlock({ title }) {
     return (
-        <section>
-            <BinaryCodeBackground />
+        <section className={styles.section}>
             <div className="container">
                 <div className="row">
                     <div className="col">

@@ -1,5 +1,5 @@
-$primary: #07070a;
-$secondary: #0d0d14;
+$primary: hsl(240, 25%, 10%);
+$secondary: hsl(240, 20%, 14%);
 $warning: #e49d62;
 
 $body-color: #ffffff;
@@ -11,14 +11,50 @@ $theme-colors: (
 $colors: (
 );
 
+// scss-docs-start gray-color-variables
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+// scss-docs-end gray-color-variables
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+);
+
 // Borders
 $border-radius: .7rem;
 $border-radius-lg: .7rem;
 
-// Font sizes
-$font-size-base: 1rem;
+// Fonts
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$font-size-base: 1.09rem;
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+
+$font-sizes: (
+);
 $display-font-sizes: (
 );
+
+// Grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px) !default;
+
 
 // Features
 $enable-smooth-scroll: false;

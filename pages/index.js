@@ -54,7 +54,7 @@ export async function getStaticProps({ params }) {
     const projects = projectRepository.findAll()
 
     const experimentRepository = new ExperimentRepository
-    const experiments = experimentRepository.findPublished()
+    const experiments = experimentRepository.findAll()
 
     const stageRepository = new StageRepository
     const stages = stageRepository.findAll()

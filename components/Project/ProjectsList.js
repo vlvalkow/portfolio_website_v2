@@ -1,6 +1,6 @@
 import Project from "./Project";
 
-export default function ProjectsList({projects}) {
+export default function ProjectsList({projects, backgroundClass}) {
     return (
         <>
             {projects.map(project => (
@@ -10,6 +10,7 @@ export default function ProjectsList({projects}) {
                     title={project.title}
                     image={project.image}
                     description={project.description}
+                    backgroundClass={backgroundClass}
                 />
             ))}
         </>

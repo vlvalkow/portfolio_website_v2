@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../../styles/Project.module.scss'
 
-export default function Project({ slug, title, image, description }) {
+export default function Project({ slug, title, image, description, backgroundClass }) {
     return (
         <div className="col slide-up">
             <Link href={{
@@ -10,7 +10,7 @@ export default function Project({ slug, title, image, description }) {
                 query: { slug: slug },
             }}>
                 <a className={styles.link}>
-                    <div className={`${styles.card} card card-link`}>
+                    <div className={`${styles.card} card card-link ${backgroundClass}`}>
                         <div className="card-header">
                             <Image 
                                 className={`${styles.image} img-fluid`} 

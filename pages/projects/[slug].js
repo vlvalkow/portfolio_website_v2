@@ -1,14 +1,14 @@
 import ErrorPage from 'next/error'
 import { useRouter } from 'next/router'
 import ProjectTitleBlock from '../../components/Block/Project/ProjectTitleBlock'
-import ProjectBackBlock from '../../components/Block/Project/ProjectBackBlock'
 import ProjectContentBlock from '../../components/Block/Project/ProjectContentBlock'
 import SettingRepository from '../../lib/Repository/SettingRepository'
 import PageRepository from '../../lib/Repository/PageRepository'
 import ProjectRepository from '../../lib/Repository/ProjectRepository'
 import Layout from '../../components/layout'
+import ProjectOtherProjectsBlock from '../../components/Block/Project/ProjectOtherProjectsBlock'
 
-export default function ProjectSingle({ page, project, settings }) {
+export default function ProjectSingle({ page, project, settings, otherProjects }) {
     const router = useRouter()
     if (!router.isFallback && !page?.slug) {
         return <ErrorPage statusCode={404} />
@@ -25,7 +25,10 @@ export default function ProjectSingle({ page, project, settings }) {
             <ProjectContentBlock
                 content={project.content}
             />
-            <ProjectBackBlock />
+            <ProjectOtherProjectsBlock
+                title="Other Projects"
+                otherProjects={otherProjects}
+            />
         </Layout>
     )
 }
@@ -37,6 +40,9 @@ export async function getStaticProps({ params }) {
     const projectRepository = new ProjectRepository
     const project = projectRepository.findByIri(page.content)
 
+
+    const otherProjects = projectRepository.findOther(params.slug)
+
     const settingRepository = new SettingRepository
     const settings = settingRepository.findAll()
 
@@ -45,6 +51,7 @@ export async function getStaticProps({ params }) {
             page: page,
             project: project,
             settings: settings,
+            otherProjects: otherProjects,
         },
     }
 }

@@ -1,5 +1,13 @@
+@import "variables";
+@import '../node_modules/bootstrap/scss/mixins/breakpoints';
+
 .card {
     background: $secondary;
     border-radius: $border-radius;
-    padding: map-get($spacers, 3);
+    padding: 1.3rem;
+    margin-bottom: 1.3rem;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+    }
 }
