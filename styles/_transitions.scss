@@ -1,0 +1,7 @@
+.slide-up {
+    transition: transform 0.2s ease-in-out 0s;
+
+    &:hover {
+        transform: translateY(-6px);
+    }
+}

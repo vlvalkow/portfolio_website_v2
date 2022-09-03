@@ -1,0 +1,12 @@
+
+.list-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0; // reset padding because ul and ol
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+.list-group-horizontal {
+    flex-direction: row;
+}

@@ -1,0 +1,23 @@
+.navbar>div {
+    display: flex;
+}
+
+.navbar-brand {
+    display: block;
+    text-decoration: none;
+    color: $body-color;
+    font-weight: bolder;
+    font-size: $font-size-base * 1.5;
+    margin-top: 3px;
+}
+
+.navbar-nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-link {
+    display: block;
+    color: $white;
+    padding: 10px;
+}

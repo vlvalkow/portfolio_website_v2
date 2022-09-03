@@ -1,0 +1,5 @@
+.card {
+    background: $secondary;
+    border-radius: $border-radius;
+    padding: map-get($spacers, 3);
+}

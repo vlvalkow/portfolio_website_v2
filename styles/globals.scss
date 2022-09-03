@@ -10,35 +10,76 @@
 @import "../node_modules/bootstrap/scss/root";
 
 // 4. Include any optional Bootstrap components as you like
-@import "../node_modules/bootstrap/scss/utilities";
+// @import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/reboot";
-@import "../node_modules/bootstrap/scss/type";
-@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/buttons";
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";
-@import "../node_modules/bootstrap/scss/nav";
-@import "../node_modules/bootstrap/scss/navbar";
-@import "../node_modules/bootstrap/scss/list-group";
-@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/type";
 
 // 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-@import "../node_modules/bootstrap/scss/utilities/api";
+// @import "../node_modules/bootstrap/scss/utilities/api";
+
+// 6 Include custom global styles.
+@import "card";
+@import "list-group";
+@import "navbar";
+@import "transitions";
+@import "utilities";
 
 @font-face {
     font-family: 'isoct2regular';
     src: url('../public/fonts/30005407-webfont.woff2') format('woff2'),
-    url('../public/fonts/30005407-webfont.woff') format('woff');
+        url('../public/fonts/30005407-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-.font-binary {
-    font-family: 'isoct2regular';
-    color: $gray-900;
+img {
+    border-radius: $border-radius;
 }
 
+h2,
+h3 {
+    font-weight: bolder;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+footer {
+    background: $primary;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 
 section {
+    position: relative;
+    overflow: hidden;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+
+    p {
+        &.lead {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-weight: normal;
+            font-size: larger;
+            margin-bottom: 2rem;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: bolder;
+        margin-bottom: 2rem;
+    }
+
     &.hero {
         padding-top: 0;
         padding-bottom: 0;
@@ -50,81 +91,7 @@ section {
         h1 {
             text-align: left;
             font-size: $font-size-base * 3;
+            margin-bottom: 1.2rem;
         }
-    }
-}
-
-section {
-    position: relative;
-    overflow: hidden;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-
-    p.lead {
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-
-    h1 {
-        text-align: center;
-        font-weight: bolder;
-        margin-bottom: 1.2rem;
-    }
-}
-
-footer {
-    background: $primary;
-}
-
-.card {
-    background: $secondary;
-    border-radius: $border-radius;
-    padding: map-get($spacers, 3);
-}
-
-
-img {
-    border-radius: $border-radius;
-}
-
-header {
-    .navbar-brand {
-        color: $body-color;
-        font-weight: bolder;
-        font-size: $font-size-base * 1.5;
-    }
-
-    .nav-link {
-        color: $white;
-    }
-}
-
-.lead {
-    font-weight: normal;
-    font-size: larger;
-    margin-bottom: 2rem;
-}
-
-h2,
-h3 {
-    font-weight: bolder;
-}
-
-.slide-up {
-    transition: transform 0.2s ease-in-out 0s;
-
-    &:hover {
-        transform: translateY(-6px);
-    }
-}
-
-header {
-    position: relative;
-    z-index: 1;
-}
-
-footer {
-    .nav-link {
-        color: $white;
     }
 }
