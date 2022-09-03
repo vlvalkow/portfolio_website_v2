@@ -9,7 +9,10 @@ export default function Layout({ children, email, username }) {
                 username={username}
             />
             {children}
-            <Footer />
+            <Footer
+                email={email}
+                username={username}
+            />
         </>
     )
 }
