@@ -2,15 +2,6 @@ $primary: hsl(240, 25%, 10%);
 $secondary: hsl(240, 20%, 14%);
 $warning: #e49d62;
 
-$body-color: #ffffff;
-$link-color: #58a6ff;
-$body-bg: $primary;
-
-$theme-colors: (
-);
-$colors: (
-);
-
 // scss-docs-start gray-color-variables
 $white: #fff;
 $gray-100: #f8f9fa;
@@ -24,6 +15,16 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
 // scss-docs-end gray-color-variables
+
+$body-color: $gray-400;
+$link-color: #58a6ff;
+$body-bg: $primary;
+
+$theme-colors: (
+);
+$colors: (
+);
+
 
 // Spacing
 $spacer: 1rem;

@@ -1,22 +1,18 @@
 @import "variables";
-@import '../node_modules/bootstrap/scss/mixins/breakpoints';
+
+.card {
+    padding: 0;
+}
 
 .link {
-    color: #ffffff;
-    text-decoration: none;
+    color: $body-color  !important;
+    text-decoration: none !important;
 
     &:hover {
-        color: #ffffff;
-        text-decoration: none;
-
         .title {
             color: $warning;
         }
     }
-}
-
-.card {
-    padding: 0;
 }
 
 .image {

@@ -41,16 +41,16 @@ img {
 }
 
 p {
-    color: $gray-400;
-
     &.lead {
         color: $white
     }
 }
 
+h1,
 h2,
 h3 {
     font-weight: bolder;
+    color: $white;
 }
 
 header {

@@ -1,13 +1,10 @@
 @import "variables";
 
 .link {
-    color: #ffffff;
-    text-decoration: none;
+    color: $body-color  !important;
+    text-decoration: none !important;
 
     &:hover {
-        color: #ffffff;
-        text-decoration: none;
-
         .title {
             color: $warning;
         }
