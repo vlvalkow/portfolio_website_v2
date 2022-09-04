@@ -8,7 +8,7 @@ export default function StagesList({stages}) {
                     key={stage.id}
                     title={stage.title}
                     description={stage.description}
-                    icon={stage.icon}
+                    image={stage.image}
                 />
             ))}
         </>
