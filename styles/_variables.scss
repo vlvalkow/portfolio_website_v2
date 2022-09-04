@@ -35,7 +35,7 @@ $spacers: (
 $border-radius: .7rem;
 $border-radius-lg: .7rem;
 
-// Fonts
+// Typography
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $font-size-base: 1.09rem;
@@ -46,6 +46,11 @@ $font-sizes: (
 );
 $display-font-sizes: (
 );
+
+// scss-docs-start headings-variables
+$headings-font-weight:        bolder !default;
+$headings-color:              $white !default;
+// scss-docs-end headings-variables
 
 // Grid
 $grid-breakpoints: (
