@@ -37,7 +37,7 @@ export default function Block({ block }) {
                     }</p>
             )
         case 'linebreak':
-            return <br/>
+            return <br />
         case 'h1':
             return <h1 className={block.classes}>{block.data}</h1>
         case 'h2':
@@ -55,7 +55,10 @@ export default function Block({ block }) {
         case 'link':
             return (
                 <Link href={block.href}>
-                    <a className={block.classes}>{block.label}</a>
+                    <a
+                        className={block.classes}
+                        target={block.target}
+                    >{block.label}</a>
                 </Link>
             )
         case 'image':
