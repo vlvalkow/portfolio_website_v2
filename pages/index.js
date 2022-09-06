@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import SettingRepository from "../lib/Repository/SettingRepository";
 import ProjectRepository from "../lib/Repository/ProjectRepository";
 import StageRepository from "../lib/Repository/StageRepository";
@@ -14,9 +15,12 @@ import Layout from "../components/layout";
 export default function Home({ page, settings, stages, projects, experiments }) {
     return (
         <Layout
-                email={settings.email}
-                username={settings.username}
+            email={settings.email}
+            username={settings.username}
         >
+            <Head>
+                <title>{page.title}</title>
+            </Head>
             <HeroBlock
                 block={page.content.find(b => b.type === 'hero')}
             />

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import ErrorPage from 'next/error'
 import { useRouter } from 'next/router'
 import ProjectTitleBlock from '../../components/Block/Project/ProjectTitleBlock'
@@ -19,6 +20,9 @@ export default function ProjectSingle({ page, project, settings, otherProjects }
             email={settings.email}
             username={settings.username}
         >
+            <Head>
+                <title>{page.title}</title>
+            </Head>
             <ProjectTitleBlock
                 title={project.title}
             />
