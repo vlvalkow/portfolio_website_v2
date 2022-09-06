@@ -26,7 +26,8 @@ export default function ProjectSingle({ page, project, settings, otherProjects }
                 content={project.content}
             />
             <ProjectOtherProjectsBlock
-                title="Other Projects"
+                title={settings.otherProjectsTitle}
+                subtitle={settings.otherProjectsSubtitle}
                 otherProjects={otherProjects}
             />
         </Layout>
