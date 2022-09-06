@@ -25,12 +25,6 @@ $theme-colors: (
 $colors: (
 );
 
-
-// Spacing
-$spacer: 1rem;
-$spacers: (
-);
-
 // Borders
 $border-radius: .7rem;
 $border-radius-lg: .7rem;
@@ -39,8 +33,9 @@ $border-radius-lg: .7rem;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $font-size-base: 1.09rem;
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
+$h1-font-size: $font-size-base * 2.3;
+$h2-font-size: $font-size-base * 1.8;
+$lead-font-size: $font-size-base * 1.15;
 
 $font-sizes: (
 );
@@ -48,19 +43,9 @@ $display-font-sizes: (
 );
 
 // scss-docs-start headings-variables
-$headings-font-weight:        bolder !default;
-$headings-color:              $white !default;
+$headings-font-weight: bolder;
+$headings-color: $white;
 // scss-docs-end headings-variables
-
-// Grid
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px) !default;
-
 
 // Features
 $enable-smooth-scroll: false;

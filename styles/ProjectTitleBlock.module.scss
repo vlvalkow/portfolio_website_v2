@@ -1,6 +1,7 @@
 @import "globals/variables";
+@import "~bootstrap/scss/mixins";
 
 .title {
     text-align: left;
-    font-size: $font-size-base * 3;
+    @include font-size($h1-font-size * 1.2);
 }

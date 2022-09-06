@@ -42,7 +42,7 @@ img {
 
 p {
     &.lead {
-        color: $white
+        color: $white;
     }
 }
 
@@ -62,14 +62,13 @@ footer {
 section {
     position: relative;
     overflow: hidden;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 
     p {
         &.lead {
             text-align: center;
             font-weight: normal;
-            font-size: larger;
             margin-bottom: 3.5rem;
         }
     }
@@ -78,6 +77,11 @@ section {
         text-align: center;
         font-weight: bolder;
         margin-bottom: 1rem;
+        @include font-size($h1-font-size * 1.45);
+
+        @include media-breakpoint-up(md) {
+            @include font-size($h1-font-size);
+        }
     }
 
     &.hero {
@@ -94,11 +98,11 @@ section {
 
         h1 {
             text-align: left;
-            font-size: $font-size-base * 2.5;
+            @include font-size($h1-font-size * 1.85);
             margin-bottom: 1.2rem;
 
             @include media-breakpoint-up(md) {
-                font-size: $font-size-base * 3;
+                @include font-size($h1-font-size * 1.45);
             }
         }
     }

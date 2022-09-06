@@ -10,7 +10,7 @@ export default function Project({ slug, title, image, description, backgroundCla
                 query: { slug: slug },
             }}>
                 <a className={styles.link}>
-                    <div className={`${styles.card} card card-link ${backgroundClass}`}>
+                    <div className={`${styles.card} card h-100 ${backgroundClass}`}>
                         <div className="card-header">
                             <Image 
                                 className={`${styles.image} img-fluid`} 
