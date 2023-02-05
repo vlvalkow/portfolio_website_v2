@@ -13,9 +13,11 @@ To deploy to prodction
 ```bash
 cd ./pipeline && production.sh
 ```
-This will generate a zip archive that can be uploaded to the production server. Assumes a `data` folder exists that contain the necessary data for a static site generation.
+This will generate a zip archive that can be uploaded to the production server. Assumes the following directories exist:
+- a `data`  directory that contains the necessary data for a static site generation
+- a `public/projects` directory exist that contains all images
 
 The following command will point to the new version
 ```
-unzip ~/pipeline/website/1.0.0.zip -d ~/pipeline/website && ln -sfrvn ~/pipeline/website/1.0.0 ~/public_html
+unzip ~/pipeline/website/1.0.2.zip -d ~/pipeline/website && ln -sfrvn ~/pipeline/website/1.0.2 ~/public_html
 ```

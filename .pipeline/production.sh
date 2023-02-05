@@ -12,6 +12,7 @@ nvm use 16.19.0
 npm install
 
 cp -r ../../data ./
+cp -r ../../public/projects ./public
 
 npm run build
 
