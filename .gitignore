@@ -34,3 +34,6 @@ yarn-error.log*
 .idea
 data
 /public/projects/*
+/.pipeline/build/
+/.pipeline/*.zip
+
