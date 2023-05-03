@@ -19,5 +19,7 @@ This will generate a zip archive that can be uploaded to the production server. 
 
 The following command will point to the new version
 ```
-unzip ~/pipeline/website/1.0.2.zip -d ~/pipeline/website && ln -sfrvn ~/pipeline/website/1.0.2 ~/public_html
+unzip ~/pipeline/website/1.0.2.1.zip -d ~/pipeline/website && ln -sfrvn ~/pipeline/website/1.0.2.1 ~/public_html
 ```
+
+If making only a content change increment the forth value of the version number.
