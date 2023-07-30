@@ -1,0 +1,51 @@
+{
+    "title": "Website",
+    "locale": "en",
+    "meta": [],
+    "pages": [
+        {
+            "id": 1,
+            "title": "Home",
+            "slug": "home",
+            "meta": [],
+            "content": {
+                "type": "static",
+                "data": []
+            }
+        },
+        {
+            "id": 2,
+            "title": "[title] | Projects",
+            "slug": "[slug]",
+            "meta": [],
+            "content": {
+                "type": "project",
+                "data": "/projects/1"
+            }
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "slug": "project-one",
+            "title": "Project One",
+            "meta": [],
+            "content": {
+                "type": "static",
+                "data": []
+            }
+        }
+    ],
+    "settings": [
+        {
+            "id": 1,
+            "name": "email",
+            "value": "hello@vladimirvalkov.dev"
+        },
+        {
+            "id": 2,
+            "name": "githubUrl",
+            "value": "https://github.com/vlvalkow"
+        }
+    ]
+}
