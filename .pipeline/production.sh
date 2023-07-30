@@ -1,3 +1,5 @@
+#!/bin/bash
+
 git clone git@github.com:vlvalkow/portfolio_website_v2.git build
 
 cd build
