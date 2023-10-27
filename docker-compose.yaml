@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  frontend:
+    image: vlvalkow/portolio_website_v2
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data/data:/app/data
+      - ./data/projects:/app/public/projects
+      - ./.pipeline/build:/app/.pipeline/build

@@ -1,32 +1,15 @@
-#!/bin/bash
+#!/bin/sh
 
-git clone git@github.com:vlvalkow/portfolio_website_v2.git build
-
-cd build
-
-latesttag=$(git describe --tags)
-echo checking out ${latesttag}
-git checkout ${latesttag}
-
-nvm install 16.19.0
-nvm use 16.19.0
+latesttag="1.0.2.3"
 
 npm install
-
-cp -r ../../data ./
-cp -r ../../public/projects ./public
 
 npm run build
 
 mv ./out ./${latesttag}
 
-jar -cfM ${latesttag}.zip ./${latesttag}
+zip -r ${latesttag}.zip ./${latesttag}
 
-cd ..
+mv ./${latesttag}.zip ./.pipeline/build/${latesttag}.zip
 
-mv ./build/${latesttag}.zip ./${latesttag}.zip
-
-rm -rf build/
-
-# This is so that the build window is not automatically closed and the output can be inspected
-read varname
+rm -rf ./${latesttag}
